@@ -6,7 +6,11 @@ for i in range(len(a)):
     povt[a[i]]+=1
     if povt[a[i]]>maxim:
         maxim=povt[a[i]]
-        res=a[i]
-print(len(set(a)),res)
 
+res=[]
+for i in range(len(a)):
+    if povt[a[i]]==maxim:
+        res.append(a[i])
+
+print(len(set(a)),min(res))
 
